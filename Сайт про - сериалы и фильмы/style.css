@@ -1,0 +1,159 @@
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:wght@300;400;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
+}
+
+h1,h2,h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "footer footer footer"
+    ;
+
+    grid-template-columns: 300px 1fr 1fr;
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.header h1 {
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+
+.aside {
+    grid-area: aside;
+    background-color: #e0e0e0;
+    margin-left: 10px;
+}
+
+.aside h2 {
+margin-bottom: 20px;
+margin-left: 10px;
+}
+
+.aside ul {
+list-style: none;
+}
+
+.aside li {
+    margin-left: 10px;
+}
+
+.aside ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.aside ul li {
+margin-bottom: 10px;
+}
+
+.aside ul li a:hover {
+    color: #a19797;
+    text-decoration: underline;
+}
+
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.card-img {
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-description {
+    text-align: center;
+}
+
+.silka {
+color: #333;
+text-decoration: none;
+list-style: none;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.footer-list {
+    display: flex;
+    gap: 15px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: #f9f9f9;
+
+}
+
+.footer ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
