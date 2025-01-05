@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+   }
+   
+   header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px 40px;
+   }
+   
+   .logo {
+    border: 2px solid #dc0034;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex; /* Добавлено для центрирования по вертикали */
+    align-items: center; /* Добавлено для центрирования по вертикали */
+   }
+
+   #seria {
+    margin-bottom: 0px;
+    margin-left: 6px;
+    font-size: 12px;
+    border: 2px solid #dc0034;
+    padding: 2px;
+    border-radius: 5px;
+   }
+
+   .buttons {
+    text-align: center;
+  }
+
+   nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   }
+   
+   nav li {
+    margin-left: 20px;
+   }
+   
+   nav a {
+    color: #fff;
+    text-decoration: none;
+   }
+   
+   main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    position: relative;
+  
+   }
+   
+   h1, h2, h3 {
+    font-weight: bold;
+    margin-top: 0;
+   }
+   
+   h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+   }
+   
+   h2 {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-size: 30px;
+    margin-bottom: 15px;
+   }
+   
+   p {
+    
+    line-height: 1.5;
+    margin-bottom: 15px;
+   }
+   
+   .episodes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin: 20px;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+   }
+   
+   .episode {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 20px;
+    position: relative; /* Для позиционирования кнопки */
+   }
+   
+   .episode img {
+    
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+   }
+   
+   .episode-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Ширина для корректного отображения */
+   }
+   
+   .episode-info p {
+    margin: 0;
+    font-size: 14px;
+   }
+   
+   .episode button {
+    background-color: #fff;
+    color: #111;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Отступ слева */
+   }
+   
+   .about {
+    margin-bottom: 20px;
+   }
+   
+   .rating {
+    display: flex;
+    margin-bottom: 20px;
+   }
+   
+   .rating i {
+    color: #ffc107; /* Цвет звезд */
+    font-size: 20px;
+   }
+   
+   .movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+   }
+   
+   .poster img {
+    width: 200px;
+    border-radius: 5px;
+   }
+   
+   .details {
+    margin-left: 20px;
+   }
+   
+   .details p {
+    margin-bottom: 5px;
+   }
+   
+   .details button {
+    background-color: #fff;
+    color: #111;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   .description {
+    margin-bottom: 20px;
+   }
+   
+   .description p {
+    margin-bottom: 10px;
+   }
+   
+/* ... ваш предыдущий CSS ... */
+
+.ds {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5)  ;
+    border-radius: 20px;
+    padding: 10px;
+   
+}
+
+.characters {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   }
+   
+.personage {
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.characters {
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    
+}
+
+   .character {
+    width: calc(50% - 10px); /* Разделите ширину на 2, с отступом */
+    margin-bottom: 20px;
+   }
+   
+   .character img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+   }
+   
+   .character-info {
+    padding: 10px;
+   }
+   
+   .character-info h3 {
+    margin-top: 0;
+   }
+   
+   /* ... ваш предыдущий CSS ... */
+
+   footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+   }
+   
+
+a {
+    color: #dc0034;
+}
+
+button {
+    padding-left: 10em;
+    line-height: 5px;
+}
