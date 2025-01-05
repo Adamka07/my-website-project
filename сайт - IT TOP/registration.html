@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Веб-проект</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+        <img src="img/it-top.jpg" alt="Логотип">
+    </div>
+    <div class="site-title">Компьютерная академия IT TOP</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">На начало</a></li>
+        <li><a href="registration.html">Регистрация</a></li>
+        <li><a href="company.html">О компании</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="praktikant.html">Практикантам</a></li>
+        <li><a href="forma.html">Форма</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main">
+
+</head>
+<body>
+<div class="block1">
+  <div class="container">
+       <h1 id="registration">Регистрация</h1>
+           <form>
+           <input type="text" placeholder="Логин" id="login" ><br>
+           <input type="password" placeholder="Пароль" id="password" ><br>
+           <button style="text-align: center;" type="submit" id="submitButton" >Зарегистрироваться / Войти</button>
+           </form>
+   </div>
+</div>
+   <div id="notification-container">
+       <div id="notification-message"></div>
+   </div>
+
+<script>
+       document.getElementById('submitButton').addEventListener('click', function(event) {
+           event.preventDefault();
+
+           let loginInput = document.getElementById('login');
+           let passwordInput = document.getElementById('password');
+           let notificationDiv = document.getElementById('notification-message');
+           if (loginInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
+             notificationDiv.textContent = 'Успешная регистрация/вход!';
+              notificationDiv.classList.remove('error');
+              notificationDiv.classList.add('show');
+              setTimeout(function(){
+                  notificationDiv.classList.remove('show');
+              },3000);
+           } else {
+               notificationDiv.textContent = 'Пожалуйста, заполните логин и пароль.';
+               notificationDiv.classList.add('error');
+               notificationDiv.classList.add('show');
+              setTimeout(function(){
+                 notificationDiv.classList.remove('show');
+                 notificationDiv.classList.remove('error');
+               },3000);
+           }
+     });
+</script>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

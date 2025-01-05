@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Веб-проект</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+        <img src="img/it-top.jpg" alt="Логотип">
+    </div>
+    <div class="site-title">Компьютерная академия IT TOP</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">На начало</a></li>
+        <li><a href="registration.html">Регистрация</a></li>
+        <li><a href="company.html">О компании</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="praktikant.html">Практикантам</a></li>
+        <li><a href="forma.html">Форма</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="block4">
+    <h1 id="praktikant">Практикантам</h1>
+    <ul>
+      <li><a href="functionjs.html">Функции в JavaScript</a></li>
+      <li><a href="raster.html">Растровая графика</a></li>
+      <li><a href="vector.html">Векторная графика</a></li>
+      <li><a href="3d.html">3D графика</a></li>
+    </ul>
+</div>
+
+</head>
+<div class="osnovajs">
+<div class="boxjs">
+<body>
+  <div class="title-boxjs">
+<h1>Сумма Цифр</h1>
+<input type="number" id="numberInput" placeholder="Введите число">
+<button id="calculateButton">Рассчитать</button>
+<div id="result"></div>
+</div>
+</div>
+</div>
+
+<script>
+  // Функция JavaScript (как обсуждалось ранее)
+  function sumOfDigits(number) {
+      const numStr = String(number);
+      let sum = 0;
+      for (let i = 0; i < numStr.length; i++) {
+          sum += parseInt(numStr[i]);
+      }
+      return sum;
+  }
+
+  // Получаем элементы HTML
+  const numberInput = document.getElementById('numberInput');
+  const calculateButton = document.getElementById('calculateButton');
+  const resultDiv = document.getElementById('result');
+
+  // Добавляем слушателя события click на кнопку
+  calculateButton.addEventListener('click', function() {
+      // Получаем число из поля ввода
+      const inputValue = numberInput.value;
+
+      // Проверяем, что значение не пустое
+       if (inputValue === ''){
+          resultDiv.textContent = 'Введите число!';
+      } else {
+      // Преобразовываем строку в число и вызываем функцию sumOfDigits
+          const number = parseInt(inputValue);
+          const sum = sumOfDigits(number);
+
+          // Отображаем результат
+          resultDiv.textContent = 'Сумма цифр: ' + sum;
+      }
+
+  });
+</script>
+
+<footer>
+    <div class="container">
+      <h2 class="footer-title">IT TOP</h2>
+      <div class="footer-contacts">
+        <ul>
+          <li><a href="https://t.me/itacademy_top" target="_blank">telegram</a></li>
+          <li><a href="https://vk.com/top_academy_nalchik" target="_blank">VK</a></li>
+          <li><a href="https://www.google.com/maps?ll=43.477029,43.610139&z=16&t=m&hl=ru&gl=RU&mapclient=embed&cid=7787568783485690548" target="_blank">Карта IT TOP</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
